@@ -51,8 +51,6 @@ __Input__: 'Thai'
 __Output__: ''
 
 
-
-
 #### Specification 4 ####
 *Yet another spec in plain english.*
 
@@ -66,6 +64,56 @@ __Output__:
 __Input__:
 
 __Output__:
+
+#### Specification 6 ####
+*Yet another spec in plain english.*
+
+__Input__:
+
+__Output__:
+
+#### Specification 7 ####
+*Yet another spec in plain english.*
+
+__Input__:
+
+__Output__:
+
+#### Specification 8 ####
+*Yet another spec in plain english.*
+
+__Input__:
+
+__Output__:
+
+#### Specification 9 ####
+*Yet another spec in plain english.*
+
+__Input__:
+
+__Output__:
+
+#### Specification 10 ####
+*Yet another spec in plain english.*
+
+__Input__:
+
+__Output__:
+
+#### Specification 11 ####
+*Yet another spec in plain english.*
+
+__Input__:
+
+__Output__:
+
+#### Specification 12 ####
+*Yet another spec in plain english.*
+
+__Input__:
+
+__Output__:
+
 
 
 ## Author/s

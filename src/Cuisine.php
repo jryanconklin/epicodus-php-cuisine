@@ -19,14 +19,14 @@
         return $this->id;
     }
 
-    function setStyle($new_style)
-    {
-        $this->style = (string) $new_style;
-    }
-
     function getStyle()
     {
         return $this->style;
+    }
+
+    function setStyle($new_style)
+    {
+        $this->style = (string) $new_style;
     }
 
 //Regular Methods
