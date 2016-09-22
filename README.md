@@ -22,25 +22,36 @@ For best results, please:
 
 ## Specifications
 
-*Enter a Cuisine Style and Save*
+#### Specification 1 ####
+*Read a Cuisine Style*
 
 __Input__: 'Thai'
 
 __Output__: 'Thai'
 
 #### Specification 2 ####
-*Update a Cuisine Style and Save*
+*Create a Cuisine Style and Save*
+
+__Input__: 'Thai'
+
+__Output__: 'Thai'
+
+#### Specification 3 ####
+*Update a Saved Cuisine Style and Save*
 
 __Input__: 'Thai', 'Northern Thai'
 
 __Output__: 'Northern Thai'
 
 #### Specification 3 ####
-*Delete a Category*
+*Delete a Cuisine Style and Save*
 
 __Input__: 'Thai'
 
 __Output__: ''
+
+
+
 
 #### Specification 4 ####
 *Yet another spec in plain english.*

@@ -6,14 +6,12 @@
     private $id;
     private $style;
 
-
 //Constructor
     function __construct($id = null, $style)
     {
         $this->id = $id;
         $this->style = $style;
     }
-
 
 //Getter and Setter Methods
     function getId()
