@@ -75,21 +75,24 @@
           }
 
 
-    //     function test_setStyle() //Update Restaurant Style
-    //     {
-    //         //Arrange
-    //         $id = 1;
-    //         $description = "Thai";
-    //         $test_cuisine = new Restaurant($id, $description);
-    //         $new_style = "Northern Thai";
-       //
-    //         //Act
-    //         $test_cuisine->setStyle($new_style);
-    //         $result = $test_cuisine->getStyle();
-       //
-    //         //Assert
-    //         $this->assertEquals($new_style, $result);
-    //     }
+        function test_setName() //Update Restaurant Name
+        {
+            //Arrange
+            $id = 1;
+            $name = "Pok Pok";
+            $description = "Tasty Thai Food!";
+            $cuisine_id = null;
+            $test_restaurant = new Restaurant($id = null, $name, $description);
+
+            $new_name = "Pok Pok Noi";
+
+            //Act
+            $test_restaurant->setName($new_name);
+            $result = $test_restaurant->getName();
+
+            //Assert
+            $this->assertEquals($new_name, $result);
+        }
 
 
     }
