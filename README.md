@@ -10,7 +10,7 @@ PHP, SQL, Silex, Twig, HTML, CSS and Bootstrap.
 
 ## Usage
 
-To use the code, you can clone the repository at [https://github.com/jryanconklin/path-to-repo](https://github.com/jryanconklin/path-to-repo).
+To use the code, you can clone the repository at [https://github.com/jryanconklin/epicodus-php-cuisine](https://github.com/jryanconklin/epicodus-php-cuisine).
 
 For best results, please:
 
