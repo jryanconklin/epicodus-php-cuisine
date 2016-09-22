@@ -1,8 +1,8 @@
-# Application Name
-Subtitle of Lesson
+# Restaurants!
+Database Basics with PHP
 
 ## Features
-A description of what it does.
+A website that allows users to create, save and update a cuisine style to the page. Restaurants can be added by cuisine style and reviews can be added.
 
 ## Technologies
 
