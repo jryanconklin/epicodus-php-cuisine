@@ -94,6 +94,44 @@
             $this->assertEquals($new_name, $result);
         }
 
+        function test_setDescription() //Update Restaurant Description
+        {
+            //Arrange
+            $id = 1;
+            $name = "Pok Pok";
+            $description = "Tasty Thai Food!";
+            $cuisine_id = null;
+            $test_restaurant = new Restaurant($id = null, $name, $description);
+
+            $new_description = "Super Good Thai Food!";
+
+            //Act
+            $test_restaurant->setDescription($new_description);
+            $result = $test_restaurant->getDescription();
+
+            //Assert
+            $this->assertEquals($new_description, $result);
+        }
+
+        function test_setCuisineId() //Update Restaurant Cuisine Id
+        {
+            //Arrange
+            $id = 1;
+            $name = "Pok Pok";
+            $description = "Tasty Thai Food!";
+            $cuisine_id = null;
+            $test_restaurant = new Restaurant($id = null, $name, $description);
+
+            $new_cuisine_id = 2;
+
+            //Act
+            $test_restaurant->setCuisineId($new_cuisine_id);
+            $result = $test_restaurant->getCuisineId();
+
+            //Assert
+            $this->assertEquals($new_cuisine_id, $result);
+        }
+
 
     }
 ?>

@@ -43,6 +43,16 @@
             $this->name = (string) $new_name;
         }
 
+        function setDescription($new_description)
+        {
+            $this->description = (string) $new_description;
+        }
+
+        function setCuisineId($new_cuisine_id)
+        {
+            $this->cuisine_id = (integer) $new_cuisine_id;
+        }
+
 
 //Regular Methods
 
