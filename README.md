@@ -22,25 +22,40 @@ For best results, please:
 
 ## Specifications
 
-*A spec in plain english.*
+*Enter a Cuisine Style and Save*
 
-__Input__:
+__Input__: 'Thai'
 
-__Output__:
+__Output__: 'Thai'
 
 #### Specification 2 ####
-*Another spec in plain english.*
+*Update a Cuisine Style and Save*
 
-__Input__:
+__Input__: 'Thai', 'Northern Thai'
 
-__Output__:
+__Output__: 'Northern Thai'
 
 #### Specification 3 ####
+*Delete a Category*
+
+__Input__: 'Thai'
+
+__Output__: ''
+
+#### Specification 4 ####
 *Yet another spec in plain english.*
 
 __Input__:
 
-__Output__: 
+__Output__:
+
+#### Specification 5 ####
+*Yet another spec in plain english.*
+
+__Input__:
+
+__Output__:
+
 
 ## Author/s
 J. Ryan Conklin
