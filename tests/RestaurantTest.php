@@ -5,13 +5,19 @@
     * @backupStaticAttributes disabled
     */
 
+    require_once __DIR__."/../inc/ConnectionTest.php";
     require_once __DIR__."/../src/Cuisine.php";
     require_once __DIR__."/../src/Restaurant.php";
     require_once __DIR__."/../src/Review.php";
-    require_once __DIR__."/../inc/ConnectionTest.php";
+
 
     class RestaurantTest extends PHPUnit_Framework_TestCase
     {
+        protected function tearDown()
+        {
+            Cuisine::deleteAll();
+            Restaurant::deleteAll();
+        }
 
         function test_getId() //Read Restaurant Id
         {
@@ -130,6 +136,70 @@
 
             //Assert
             $this->assertEquals($new_cuisine_id, $result);
+        }
+
+        function test_save()
+        {
+            //Arrange
+            $id = null;
+            $name = "Pok Pok";
+            $description = "Tasty Thai Food!";
+            $cuisine_id = 0;
+            $test_restaurant = new Restaurant($id, $name, $description, $cuisine_id);
+            $test_restaurant->save();
+
+            //Act
+            $result = Restaurant::getAll();
+
+            //Assert
+            $this->assertEquals($test_restaurant, $result[0]);
+        }
+
+        function test_getAll()
+        {
+            //Arrange
+            $id1 = null;
+            $id2 = null;
+            $name1 = "Pok Pok";
+            $name2 = "Aprisa";
+            $description1 = "Tasty Thai Food!";
+            $description2 = "So good!";
+            $cuisine_id1 = 0;
+            $cuisine_id2 = 0;
+            $test_restaurant1 = new Restaurant($id1, $name1, $description1, $cuisine_id1);
+            $test_restaurant1->save();
+            $test_restaurant2 = new Restaurant($id2, $name2, $description2, $cuisine_id2);
+            $test_restaurant2->save();
+
+            //Act
+            $result = Restaurant::getAll();
+
+            //Assert
+            $this->assertEquals([$test_restaurant1, $test_restaurant2], $result);
+        }
+
+        function test_deleteAll()
+        {
+            //Arrange
+            $id1 = null;
+            $id2 = null;
+            $name1 = "Pok Pok";
+            $name2 = "Aprisa";
+            $description1 = "Tasty Thai Food!";
+            $description2 = "So good!";
+            $cuisine_id1 = 0;
+            $cuisine_id2 = 0;
+            $test_restaurant1 = new Restaurant($id1, $name1, $description1, $cuisine_id1);
+            $test_restaurant1->save();
+            $test_restaurant2 = new Restaurant($id2, $name2, $description2, $cuisine_id2);
+            $test_restaurant2->save();
+
+            //Act
+            Restaurant::deleteAll();
+            $result = Restaurant::getAll();
+
+            //Assert
+            $this->assertEquals([], $result);
         }
 
 

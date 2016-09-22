@@ -9,7 +9,7 @@
         private $cuisine_id;
 
 //Constructor
-        function __construct($id = null, $name, $description, $cuisine_id = null)
+        function __construct($id = null, $name, $description, $cuisine_id = 0)
         {
             $this->id = $id;
             $this->name = $name;
@@ -55,18 +55,34 @@
 
 
 //Regular Methods
-
-
-
-
-
+        function save()
+        {
+            $GLOBALS['DB']->exec("INSERT INTO restaurants (name, description, cuisine_id) VALUES ('{$this->getName()}', '{$this->getDescription()}', {$this->getCuisineId()})");
+            $this->id = $GLOBALS['DB']->lastInsertId();
+        }
 
 
 //Static Methods
+        static function getAll()
+        {
+            $returned_restaurants = $GLOBALS['DB']->query("SELECT * FROM restaurants;");
+            $restaurants = array();
 
+            foreach($returned_restaurants as $restaurant) {
+                $id = $restaurant['id'];
+                $name = $restaurant['name'];
+                $description = $restaurant['description'];
+                $cuisine_id = $restaurant['cuisine_id'];
+                $new_restaurant = new Restaurant($id, $name, $description, $cuisine_id);
+                array_push($restaurants, $new_restaurant);
+            }
+            return $restaurants;
+        }
 
-
-
+        static function deleteAll()
+        {
+            $GLOBALS['DB']->exec("DELETE FROM restaurants;");
+        }
 
 
 

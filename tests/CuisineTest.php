@@ -5,8 +5,10 @@
     * @backupStaticAttributes disabled
     */
 
-    require_once __DIR__."/../src/Cuisine.php";
     require_once __DIR__."/../inc/ConnectionTest.php";
+    require_once __DIR__."/../src/Cuisine.php";
+    require_once __DIR__."/../src/Restaurant.php";
+    require_once __DIR__."/../src/Review.php";
 
     class CuisineTest extends PHPUnit_Framework_TestCase
     {
@@ -90,9 +92,9 @@
 
             //Act
             $result = Cuisine::getAll();
+
             //Assert
             $this->assertEquals([$test_cuisine1, $test_cuisine2], $result);
-
         }
 
         function test_deleteAll()
